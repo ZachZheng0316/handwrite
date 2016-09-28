@@ -1,0 +1,25 @@
+#ifndef _KINESIOLOGY_HEADER
+#define _KINESIOLOGY_HEADER
+
+#ifdef _cplusplus
+extern "C" {
+#endif
+
+//硬件尺寸
+#define J   (90.00)
+#define G   (180.0)
+#define H   (235.0)
+
+//运动学
+void cal_xy_angle(float *xy, float *angle);   //已知坐标求关节角度
+void cal_angle_xy(float *angle, float *xy);   //已知关节角度求坐标
+
+//求速度
+void cal_lspe_aspe(float *lspe, float *aspe); //已知线速度求关节角速度
+void cal_aspe_lspe(float *aspe, float *lspe); //已知关节角速度求线速度
+
+#ifdef _cplusplus
+}
+#endif
+
+#endif
